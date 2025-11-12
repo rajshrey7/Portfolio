@@ -6,6 +6,7 @@ import TextReveal from '../components/TextReveal';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ScrollReveal from '../components/ScrollReveal';
 import StaggerContainer from '../components/StaggerContainer';
+import Scene3D from '../components/ThreeJS/Scene3D';
 import { useApi } from '../hooks/useApi';
 import { SKILL_CATEGORIES, STATS, EXPERIENCE } from '../utils/constants';
 import { getSkills } from '../services/api';
@@ -55,6 +56,11 @@ const AboutSection = () => {
 
   return (
     <div className="about-section">
+      {/* Advanced 3D Particle Background */}
+      <div className="about-three-background">
+        <Scene3D type="particles" cameraPosition={[0, 0, 12]} fov={75} />
+      </div>
+      
       <FadeUp className="about-hero section">
         <div className="about-hero-content">
           <motion.div

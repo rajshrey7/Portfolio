@@ -2,6 +2,19 @@
   position: relative;
   z-index: 1;
   background: var(--dark-bg);
+  overflow: hidden;
+}
+
+/* Professional 3D Wireframe Background - Subtle */
+.projects-three-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .projects-hero {

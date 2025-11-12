@@ -8,6 +8,7 @@ import TextReveal from '../components/TextReveal';
 import NumberCounter from '../components/NumberCounter';
 import MagneticButton from '../components/MagneticButton';
 import Parallax from '../components/Parallax';
+import Scene3D from '../components/ThreeJS/Scene3D';
 import { useMousePosition } from '../hooks/useMousePosition';
 import { useApi } from '../hooks/useApi';
 import { scrollToSection } from '../utils/scrollUtils';
@@ -61,6 +62,11 @@ const HeroSection = () => {
   return (
     <div className="hero-section-new">
       <div className="animated-grid"></div>
+      
+      {/* Advanced 3D Hero Background */}
+      <div className="hero-three-background">
+        <Scene3D type="hero" cameraPosition={[0, 0, 10]} fov={75} />
+      </div>
       
       <motion.div
         className="floating-orb orb-1"
@@ -203,6 +209,11 @@ const HeroSection = () => {
             transition={{ duration: 1.2, delay: 0.5 }}
           >
           <div className="tech-stack-3d">
+            {/* Subtle 3D Tech Stack Visualization */}
+            <div className="tech-stack-three-container">
+              <Scene3D type="tech" cameraPosition={[0, 0, 6]} fov={60} />
+            </div>
+            {/* 2D cards as main content */}
             {techStack.map((tech, index) => (
               <motion.div
                 key={index}

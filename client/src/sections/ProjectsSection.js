@@ -7,6 +7,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import ScrollReveal from '../components/ScrollReveal';
 import TextReveal from '../components/TextReveal';
 import StaggerContainer from '../components/StaggerContainer';
+import Scene3D from '../components/ThreeJS/Scene3D';
 import { PROJECT_CATEGORIES } from '../utils/constants';
 import { getProjects } from '../services/api';
 import { getGitHubProjects } from '../services/github';
@@ -90,6 +91,11 @@ const ProjectsSection = () => {
 
   return (
     <div className="projects-section-page">
+      {/* Advanced 3D Wireframe Background */}
+      <div className="projects-three-background">
+        <Scene3D type="wireframe" cameraPosition={[0, 0, 15]} fov={75} />
+      </div>
+      
       <FadeUp className="section projects-hero">
         <div className="hero-content-wrapper">
           <motion.div

@@ -9,6 +9,18 @@
   background: var(--dark-bg);
 }
 
+/* Professional 3D Hero Background - Subtle */
+.hero-three-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .animated-grid {
   position: absolute;
   top: 0;
@@ -609,12 +621,28 @@
   justify-content: center;
   gap: 40px;
   perspective: 1000px;
+  position: relative;
+}
+
+/* Professional 3D Tech Stack Container - Subtle */
+.tech-stack-three-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.2;
 }
 
 .tech-stack-3d {
   display: flex;
   gap: 30px;
   transform-style: preserve-3d;
+  position: relative;
+  z-index: 2;
 }
 
 .tech-card-3d {

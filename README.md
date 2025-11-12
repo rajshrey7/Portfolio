@@ -445,6 +445,29 @@ Custom animations include:
 - Update `MONGO_URI` in backend environment variables
 - Run seed script if needed: `node server/seed.js`
 
+### Environment Variables Setup
+
+**Backend (.env in `server/` directory):**
+```bash
+cd server
+cp .env.example .env
+# Edit .env with your actual values
+```
+
+**Frontend (.env in `client/` directory):**
+```bash
+cd client
+cp .env.example .env
+# Edit .env with your actual values
+```
+
+**⚠️ Important:** 
+- Never commit `.env` files to version control
+- Use `.env.example` as a template
+- Set environment variables in your deployment platform's dashboard
+
+**Common Deployment Errors?** See [DEPLOYMENT_TROUBLESHOOTING.md](./DEPLOYMENT_TROUBLESHOOTING.md) for solutions.
+
 ---
 
 ## 📝 Recent Updates

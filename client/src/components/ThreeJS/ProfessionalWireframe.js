@@ -1,29 +1,70 @@
-import React, { useRef, useMemo } from 'react';
-import { useFrame } from '@react-three/fiber';
+import React, { useMemo } from 'react';
 import * as THREE from 'three';
+import { useRotation } from './hooks/useRotation';
+import {
+  WIREFRAME_CONFIG,
+  MATERIAL_CONFIG,
+} from './constants';
 
-const ProfessionalWireframe = ({ size = 15, segments = 15 }) => {
-  const meshRef = useRef();
+/**
+ * ProfessionalWireframe Component
+ * 
+ * A rotating wireframe grid pattern created using line segments.
+ * Provides a subtle background effect with smooth rotation animation.
+ * 
+ * @param {number} size - Size of the wireframe grid
+ * @param {number} segments - Number of segments per axis
+ * @returns {JSX.Element} Wireframe grid scene
+ */
+const ProfessionalWireframe = ({
+  size = WIREFRAME_CONFIG.DEFAULT_SIZE,
+  segments = WIREFRAME_CONFIG.DEFAULT_SEGMENTS,
+}) => {
+  const meshRef = useRotation(
+    WIREFRAME_CONFIG.ROTATION_SPEED,
+    0,
+    'z'
+  );
+
+  // Generate wireframe geometry
   const edges = useMemo(() => {
-    const geom = new THREE.BufferGeometry();
-    const pos = [];
+    const geometry = new THREE.BufferGeometry();
+    const positions = [];
+    
+    // Generate grid lines
     for (let i = 0; i <= segments; i++) {
-      const x = (i / segments - 0.5) * size;
-      const y = (i / segments - 0.5) * size;
-      pos.push(x, -size / 2, 0, x, size / 2, 0);
-      pos.push(-size / 2, y, 0, size / 2, y, 0);
+      const normalized = i / segments;
+      const coordinate = (normalized - 0.5) * size;
+      
+      // Vertical lines
+      positions.push(
+        coordinate, -size / 2, 0,
+        coordinate, size / 2, 0
+      );
+      
+      // Horizontal lines
+      positions.push(
+        -size / 2, coordinate, 0,
+        size / 2, coordinate, 0
+      );
     }
-    geom.setAttribute('position', new THREE.BufferAttribute(new Float32Array(pos), 3));
-    return geom;
+    
+    geometry.setAttribute(
+      'position',
+      new THREE.BufferAttribute(new Float32Array(positions), 3)
+    );
+    
+    return geometry;
   }, [size, segments]);
-
-  useFrame(() => {
-    if (meshRef.current) meshRef.current.rotation.z += 0.0002;
-  });
 
   return (
     <lineSegments ref={meshRef} geometry={edges}>
-      <lineBasicMaterial color="#4a4a4a" transparent opacity={0.2} linewidth={1} />
+      <lineBasicMaterial
+        color={MATERIAL_CONFIG.WIREFRAME.color}
+        transparent={MATERIAL_CONFIG.WIREFRAME.transparent}
+        opacity={MATERIAL_CONFIG.WIREFRAME.opacity}
+        linewidth={MATERIAL_CONFIG.WIREFRAME.linewidth}
+      />
     </lineSegments>
   );
 };

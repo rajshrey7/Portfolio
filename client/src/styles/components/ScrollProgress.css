@@ -1,0 +1,22 @@
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6, #10b981);
+  transform-origin: 0%;
+  z-index: 10000;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6), 0 2px 10px rgba(59, 130, 246, 0.4);
+  animation: progressGlow 3s ease-in-out infinite;
+}
+
+@keyframes progressGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.6), 0 2px 10px rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.8), 0 2px 15px rgba(59, 130, 246, 0.6);
+  }
+}
+

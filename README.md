@@ -9,9 +9,9 @@ A stunning, modern portfolio website showcasing my journey as an aspiring Full-S
 **Shreyansh Raj**  
 📍 Bhubaneswar, Odisha, India  
 🎓 B.Tech in CSE (AI & ML) - CV Raman Global University (8.41 CGPA)  
-📧 rshreyansh790@gmail.com  
-📱 +91-8709168972  
-🔗 [GitHub](http://github.com/rajshrey7) | [LinkedIn](https://www.linkedin.com/in/shreyansh-raj-fe5aa026ca) | [Amazon Author](http://amazon.com/author/shreyansh-raj)
+📧 [Your Email]  
+📱 [Your Phone]  
+🔗 [GitHub](http://github.com/yourusername) | [LinkedIn](https://www.linkedin.com/in/yourprofile) | [Portfolio](https://yourportfolio.com)
 
 ### 🏆 Achievements
 
@@ -119,12 +119,17 @@ Before you begin, ensure you have the following installed:
    EMAIL_PORT=587
    EMAIL_USER=your-email@gmail.com
    EMAIL_PASS=your-app-password
+   
+   # Note: Never commit actual credentials to version control
+   # Use environment variables or a secrets management service
    ```
 
    For MongoDB Atlas, use:
    ```env
    MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/portfolio?retryWrites=true&w=majority
    ```
+   
+   **⚠️ Security Note:** Never commit actual credentials to version control. Use environment variables or a secrets management service.
 
 4. **Seed the database** (Optional)
    ```bash
@@ -257,8 +262,8 @@ Portfolio/
 - 🗄️ Neon DB with Drizzle ORM for database management
 - 📈 90% user engagement through ML recommendations
 - **Tech Stack:** Next.js, React.js, Tailwind CSS, Google Gemini AI, Neon DB, Drizzle ORM, Vercel
-- **🌐 Live Demo:** [https://edu-mitra.vercel.app/](https://edu-mitra.vercel.app/)
-- **📂 GitHub:** [rajshrey7/EduMitra](https://github.com/rajshrey7/EduMitra)
+- **🌐 Live Demo:** [Project Demo](https://your-project-demo.vercel.app/)
+- **📂 GitHub:** [YourUsername/ProjectName](https://github.com/yourusername/projectname)
 
 ### 2. SilentWitness - Anonymous Incident Reporting System
 **Duration:** Oct 2024 - Dec 2024  
@@ -269,8 +274,8 @@ Portfolio/
 - 👮 Admin panel with Vercel deployment
 - 🛡️ Zero data breach database operations
 - **Tech Stack:** Next.js, TypeScript, Prisma ORM, Neon DB, AI/ML
-- **🌐 Live Demo:** [https://silent-witness-pi.vercel.app/](https://silent-witness-pi.vercel.app/)
-- **📂 GitHub:** [rajshrey7/SilentWitness](https://github.com/rajshrey7/SilentWitness)
+- **🌐 Live Demo:** [Project Demo](https://your-project-demo.vercel.app/)
+- **📂 GitHub:** [YourUsername/ProjectName](https://github.com/yourusername/projectname)
 
 ### 3. TaskifyAI - Task Management Application
 **Duration:** Jan 2025 - Feb 2025  
@@ -281,7 +286,7 @@ Portfolio/
 - 🔐 Clerk authentication integration
 - 🏆 **Winner** - Hackniche Hackathon 2025
 - **Tech Stack:** Next.js, Tailwind CSS, Shaden UI, Clerk Auth
-- **📂 GitHub:** [rajshrey7/TaskifyAI](https://github.com/rajshrey7/TaskifyAI)
+- **📂 GitHub:** [YourUsername/ProjectName](https://github.com/yourusername/projectname)
 
 ---
 
@@ -349,9 +354,11 @@ Custom animations include:
 
 **Contact Info & Stats:**
 - Edit `client/src/utils/constants.js`
-  - Update `CONTACT_INFO` object
+  - Update `CONTACT_INFO` object (email, phone, location)
   - Update `STATS` array
-  - Update `SOCIAL_LINKS` array
+  - Update `SOCIAL_LINKS` array (GitHub, LinkedIn, etc.)
+  
+**⚠️ Important:** Never commit sensitive information like API keys, passwords, or personal contact details to version control. Use environment variables instead.
 
 **About Section:**
 - Edit `client/src/sections/AboutSection.js`
@@ -377,7 +384,7 @@ Custom animations include:
 ### 3. Add Projects & Skills
 
 **Projects:**
-- Projects are automatically fetched from GitHub (github.com/rajshrey7)
+- Projects are automatically fetched from GitHub (update username in `client/src/services/github.js`)
 - Add via API endpoints: `POST /api/projects`
 - Or seed database: `cd server && node seed.js`
 - Update `server/seed.js` for seed data
@@ -416,9 +423,11 @@ Custom animations include:
 
 1. **Set environment variables:**
    - `PORT` (auto-set by platform)
-   - `MONGO_URI` (MongoDB Atlas connection string)
+   - `MONGO_URI` (MongoDB Atlas connection string - keep this secret!)
    - `NODE_ENV=production`
-   - Email credentials (if using contact form)
+   - Email credentials (if using contact form - keep these secret!)
+   
+   **⚠️ Security:** Use your platform's environment variable settings. Never hardcode secrets in your code.
 
 2. **Deploy:**
    - **Render:** Connect GitHub, select `server` folder
@@ -458,8 +467,8 @@ Custom animations include:
 
 ### 🎯 Live Demo Links Added
 
-- ✅ EduMitra: [https://edu-mitra.vercel.app/](https://edu-mitra.vercel.app/)
-- ✅ SilentWitness: [https://silent-witness-pi.vercel.app/](https://silent-witness-pi.vercel.app/)
+- ✅ EduMitra: [Live Demo](https://your-project-demo.vercel.app/)
+- ✅ SilentWitness: [Live Demo](https://your-project-demo.vercel.app/)
 
 ---
 
@@ -467,10 +476,12 @@ Custom animations include:
 
 If you have any questions or issues:
 
-- 📧 Email: rshreyansh790@gmail.com
-- 📱 Phone: +91-8709168972
-- 🔗 GitHub: [rajshrey7](http://github.com/rajshrey7)
-- 💼 LinkedIn: [shreyansh-raj](https://www.linkedin.com/in/shreyansh-raj-fe5aa026ca)
+- 📧 Email: [Your Email]
+- 🔗 GitHub: [Your Username](http://github.com/yourusername)
+- 💼 LinkedIn: [Your Profile](https://www.linkedin.com/in/yourprofile)
+- 🌐 Portfolio: [Your Portfolio URL](https://yourportfolio.com)
+
+**Note:** Update contact information in `client/src/utils/constants.js`
 
 ---
 
